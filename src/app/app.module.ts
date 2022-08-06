@@ -9,6 +9,13 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModuleModule } from './material-module/material-module.module';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { ClientsModule } from './clients/clients.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MessageConfirmComponent } from './dialog/message-confirm/message-confirm.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -16,13 +23,20 @@ import { MaterialModuleModule } from './material-module/material-module.module';
     HeaderComponent,
     SidenavComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ErrorPageComponent,
+    MessageConfirmComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    ClientsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
